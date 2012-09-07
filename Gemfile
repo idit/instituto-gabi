@@ -9,7 +9,7 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'jquery-rails'
 gem 'paginate'
-
+gem 'thin'
 
 group :development, :test do
   gem 'mysql2'
