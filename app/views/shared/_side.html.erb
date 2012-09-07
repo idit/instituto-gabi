@@ -1,0 +1,23 @@
+<div class="content page-bg span5">
+	<h1>Nossas contas bancárias</h1>
+	<p>
+		Para obter os nossos dados bancários, entre em contato conosco através do nosso formulário clicando aqui ou pelo telefone
+		(11) 5564-7709.
+	</p>
+
+	<h1>Doações online</h1>
+	<p>
+	  <form target="pagseguro" action="https://pagseguro.uol.com.br/checkout/doacao.jhtml" method="post">
+	    <input type="hidden" name="email_cobranca" value="financeiro@institutogabi.org.br" />
+	    <input type="hidden" name="moeda" value="BRL" />
+	    <input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/doacoes/120x53-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" style="width: 120px; float: left; margin-right: 10px;" />
+	  </form>
+		Você pode doar qualquer valor para o Instituto Gabi, clicando no botão ao lado.
+	</p>
+
+	<h1>Como sua empresa pode ajudar</h1>
+	<p>
+		Sua empresa contribui com o Instituto Gabi e a doação é abatida do imposto de renda.
+		<%= link_to "Saiba mais", ajuda_empresa_path, :class => "leia-mais" %>
+	</p>
+</div>

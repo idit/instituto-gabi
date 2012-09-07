@@ -1,0 +1,35 @@
+<header>
+  <div class="row page-bg header" style="position: relative;">
+    <div class="span4" >
+      <img src="<%= image_path('ig/logo-gabi.png') %>" class="logo" />
+    </div>
+    <div class="span8 paper-bg paper-block">
+      <div class="header-content">
+        <div class="row">
+          <div class="span4">
+            <span>Faça sua doação agora:</span>
+            <img src="<%= image_path('ig/lg-pag-seguro.png') %>" class="pag-seguro"/>
+          </div>
+          <div class="span3">
+            <h3 class="hash">#ajudegabi</h3>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+          <div class="span8">
+            <form>
+              <!--<span>Busca:</span> <input type="text" class="input-small" />
+              <img src="<%= image_path('ig/icn-search.png') %>" class="social-icons" />-->
+              <div class="header-social">
+                <span style="margin-left: 30px;">Espalhe essa causa:</span>
+                <%= link_to image_tag('ig/icn-facebook.png'), "https://www.facebook.com/InstitutoGabi", :class => "social-icons" %>
+                <%= link_to image_tag('ig/icn-twitter.png'), "https://twitter.com/institutogabi", :class => "social-icons" %>
+                <!--<img src="<%= image_path('ig/icn-linkedin.png') %>" class="social-icons" />
+                <img src="<%= image_path('ig/icn-feed.png') %>" class="social-icons" />-->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

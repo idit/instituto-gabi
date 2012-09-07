@@ -1,0 +1,64 @@
+<!-- container -->
+<div class="container">
+	<%= render "shared/header" %>
+
+	<%= render "shared/nav" %>
+
+	<div class="row page-bg" style="min-height: 630px;">
+		<article>
+			<div class="page-bg">
+				<div class="content span7">
+					<% if @contact.errors.any? %>
+					  <div class="form-errors">
+					    <p>Por favor, verifique o formulário antes de continuar!</p>
+					    <ul>
+					      <% @contact.errors.full_messages.each do |message| %>
+					        <li><%= message %></li>
+					      <% end %>
+					    </ul>
+					  </div>
+					<% end %>
+
+					<%= form_for @contact, :url => contato_path do |f| %>
+					  <%= f.label :name, "Nome" %>
+					  <%= f.text_field :name %>
+
+					  <%= f.label :email, "E-mail" %>
+					  <%= f.email_field :email %>
+
+					  <%= f.label :city, "Cidade" %>
+					  <%= f.text_field :city %>
+
+					  <%= f.label :state, "Estado" %>
+					  <%= f.text_field :state %>
+
+					  <%= f.label :phone, "Telefone" %>
+					  <%= f.text_field :phone %>
+
+					  <%= f.label :type, "Tipo/Informação" %>
+					  <%= f.text_field :type %>
+
+					  <%= f.label :menssage, "Mensagem" %>
+					  <%= f.text_area :message %>
+
+					  <%= f.submit "Enviar" %>
+					<% end %>
+				</div>
+
+				<%= render "shared/side"%>
+
+				<div style="clear: both;"></div>
+			</div>
+		</article>
+	</div>
+
+	<%= render "shared/footer" %>
+</div>
+<%= stylesheet_link_tag    "glisse", media: "all" %>
+<%= javascript_include_tag "glisse.js" %>
+<script type="text/javascript">
+$(function() {
+	$(".t1").glisse({speed: 500, changeSpedd: 550, effect: "fade", fullscreen: false});
+});
+</script>
+<!-- container -->

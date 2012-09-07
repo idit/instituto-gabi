@@ -1,0 +1,30 @@
+<!-- container -->
+<div class="container">
+	<%= render "shared/header" %>
+
+	<%= render "shared/nav" %>
+
+	<div class="row page-bg" style="min-height: 630px;">
+		<article>
+			<div class="page-bg">
+				<div class="content span7">
+					<% @noticias.each do |noticia| %>
+					<h3><%= noticia.title %></h3>
+					<div>
+						<%= smart_truncate(noticia.post, :words => 45).html_safe %>
+					</div>
+					<%= link_to "#leiamais", noticia_path(noticia), :class => "leia-mais" %>
+					<% end %>
+					<%= paginate @noticias %>
+				</div>
+
+				<%= render "shared/side"%>
+
+				<div style="clear: both;"></div>
+			</div>
+		</article>
+	</div>
+
+	<%= render "shared/footer" %>
+</div>
+<!-- container -->

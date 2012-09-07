@@ -1,0 +1,79 @@
+@import "bootstrap";
+
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/** Header **/
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/** form **/
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors label, .field_with_errors p, .help-block.error {
+  color: #B94A48;
+}
+
+.field_with_errors input, .field_with_errors select, .field_with_errors textarea {
+    border-color: #B94A48;
+    color: #B94A48;
+}
+.field_with_errors input:focus, .field_with_errors select:focus, .field_with_errors textarea:focus {
+    border-color: #953B39;
+    box-shadow: 0 0 6px #D59392;
+}
+.field_with_errors .input-prepend .add-on, .field_with_errors .input-append .add-on {
+    background-color: #F2DEDE;
+    border-color: #B94A48;
+    color: #B94A48;
+}

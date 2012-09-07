@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title><%= yield(:title) %></title>
+  <meta charset="utf-8">
+  <%= stylesheet_link_tag    "admin/custom", media: "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+    <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
+
+  <%= javascript_include_tag "admin/custom" %>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<%= provide(:title, "Notícias") %>
+  
+  <div class="row">
+    <div class="span8">
+      <%= render 'form' %>
+    </div>
+    <div class="span4">
+      <div class="form-actions">
+        <a href="<%= admin_posts_path %>" class="btn btn-small" rel="tooltip" title="Lista"><i class="icon-list"></i></a>
+      </div>
+      <div>
+      <ul class="thumbnails">
+        <% @files.each do |file| %>
+        <li class="span2">
+          <div class="thumbnail">
+            <%= image_tag "../"+file.path %>
+            <button class="btn btn-small btn-success" onclick="prompt('Use CTRL + C, para copiar', '<%= 'http://' + request.host_with_port + '/' + file.path %>')"></i>Copiar URL</button>
+          </div>
+        </li>
+        <% end %>
+      <ul>
+      </div>
+      <div>
+        <%= will_paginate @files, param_name: 'file_page' %>
+      </div>
+    </div>
+  </div>

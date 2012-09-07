@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    attributes:
+      contact:
+        name:    "Nome"
+        email:   "E-mail"
+        city:    "Cidade"
+        state:   "Estado"
+        phone:   "Telefone"
+        type:    "Tipo/Informação"
+        message: "Mensagem"

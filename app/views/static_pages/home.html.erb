@@ -1,0 +1,95 @@
+<!-- container -->
+<div class="container">
+  <%= render "shared/header" %>
+
+  <%= render "shared/nav" %>
+
+            <div class="row page-bg" >
+               <div id="myCarousel" class="carousel span11">
+                 <!-- Carousel items -->
+                 <div class="carousel-inner">
+                   <div class="item active">
+                     <img src="<%= image_path('ig/bn-home-img-1.jpg') %>" />
+                    <div class="carousel-caption">
+                      <p>
+                        O Instituto Gabi atende 70 crianças e adolescentes com deficiência e de baixa renda.É um projeto compartilhado
+                        por pessoas e empresas solidárias que acreditam no trabalho competente da equipe de profissionais que atuam na organização.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="item"><img src="<%= image_path('ig/bn-home-img-1.jpg') %>" title="#htmlcaption"/></div>
+                  <div class="item"><img src="<%= image_path('ig/bn-home-img-1.jpg') %>" title="#htmlcaption"/></div>
+                  <div class="item"><img src="<%= image_path('ig/bn-home-img-1.jpg') %>" title="#htmlcaption"/></div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+              </div>
+            </div>
+
+            <div class="row page-bg">
+              <div class="span5">
+                  <div class="stick-bg stick-note">
+                      <h4>Ajude a construir a Casa Gabi</h4>
+                      <p>
+                          Além das 70 crianças e adolescentes com deficiência que recebem o atendimento no Instituto Gabi, há uma longa lista de espera
+                          de famílias que aguardam uma vaga.
+                      </p>
+                      <p>
+                          Ajude o adquirir a sede própria e acolher estas famílias que precisam de atendimento. É a oportunidade de agregar a imagem da
+                          sua empresa a um projeto social de qualidade e ter sua contribuição deduzida no imposto de renda.
+                      </p>
+                      <p>
+                          Entre em contato conosco e veja outras formas de apoio.
+                      </p>
+                  </div>
+              </div>
+              <div class="span7">
+                  <h3 class="gabi">Inclusão Social de pessoas com Deficiência.</h3>
+                  <p>
+                      O Instituto Gabi está comemorando uma década de inclusão social de crianças e adolescentes com deficiência de baixa renda.
+                      Centenas de pessoas foram atendidas.
+                  </p>
+                  <p>
+                      Atualmente, o Instituto Gabi é referência no atendimento à pessoas com deficiência. O poder público, a mídia e a comunidade
+                      reconhecem o trabalho sério e competente desenvolvido pela equipe de funcionários e de voluntários.
+                  </p>
+                  <p>
+                      Você também pode ajudar estas pessoas. Abrace esta causa.</p>
+                  <p>
+                      Veja algumas formas:
+                  </p>
+                  <ul>
+                      <li>Ser voluntário presencial e online</li>
+                      <li>Contribuir com dedução do imposto de renda</li>
+                      <li>Doar crédito da nota fiscal e/ou doar as notas sem CPF</li>
+                      <li>Oferecer doações para a manutenção da casa e para o bazar social</li>
+                  </ul>
+              </div>
+            </div>
+
+            <div class="row page-bg">
+              <div class="news-wrapper">
+                <% @news.each do |new| %>
+                <div class="span4 news">
+	                  <div class="addthis_toolbox addthis_default_style" style="float: right; margin-top: 20px; margin-right: 20px;" addthis:url="<%= noticia_url(new) %>">
+										  <a class="addthis_button_facebook"></a>
+										  <a class="addthis_button_twitter"></a>
+										  <a class="addthis_button_email"></a>
+										</div>
+                    <div class="top trap-bg"></div>
+                    <h4><%= new.title %></h4>
+                    <%= smart_truncate(new.post, :words => 55).html_safe %>
+                    <%= link_to "#leiamais", noticia_path(new), :class => "leia-mais" %>
+                </div>
+                <% end %>
+                <div style="clear: both;"></div>
+              </div>
+            </div>
+
+          <%= render "shared/footer" %>
+
+        </div>
+        <!-- container -->
+
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-501549335759b646"></script>

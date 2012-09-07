@@ -1,0 +1,56 @@
+<!-- container -->
+<div class="container">
+	<%= render "shared/header" %>
+
+	<%= render "shared/nav" %>
+
+	<div class="row page-bg" style="min-height: 630px;">
+		<article>
+			<div class="page-bg">
+				<div class="content span7">
+					<ul class="stack" data-count="4">
+						<li><%= image_tag "001.jpg", :rel => "group1", :"data-glisse-big" => "assets/001.jpg", :class => "t1"   %></li>
+						<li><%= image_tag "016.jpg", :rel => "group1", :"data-glisse-big" => "assets/016.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "017.jpg", :rel => "group1", :"data-glisse-big" => "assets/017.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "018.jpg", :rel => "group1", :"data-glisse-big" => "assets/018.jpg", :class => "t1"  %></li>
+					</ul>
+
+					<ul class="stack" data-count="9">
+						<li><%= image_tag "004.jpg", :rel => "group2", :"data-glisse-big" => "assets/004.jpg", :class => "t1"   %></li>
+						<li><%= image_tag "002.jpg", :rel => "group2", :"data-glisse-big" => "assets/002.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "003.jpg", :rel => "group2", :"data-glisse-big" => "assets/003.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "005.jpg", :rel => "group2", :"data-glisse-big" => "assets/005.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "006.jpg", :rel => "group2", :"data-glisse-big" => "assets/006.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "007.jpg", :rel => "group2", :"data-glisse-big" => "assets/007.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "008.jpg", :rel => "group2", :"data-glisse-big" => "assets/008.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "010.jpg", :rel => "group2", :"data-glisse-big" => "assets/010.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "011.jpg", :rel => "group2", :"data-glisse-big" => "assets/011.jpg", :class => "t1"  %></li>
+					</ul>
+
+					<ul class="stack" data-count="5">
+						<li><%= image_tag "015.jpg", :rel => "group3", :"data-glisse-big" => "assets/015.jpg", :class => "t1"   %></li>
+						<li><%= image_tag "009.jpg", :rel => "group3", :"data-glisse-big" => "assets/009.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "012.jpg", :rel => "group3", :"data-glisse-big" => "assets/012.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "013.jpg", :rel => "group3", :"data-glisse-big" => "assets/013.jpg", :class => "t1"  %></li>
+						<li><%= image_tag "014.jpg", :rel => "group3", :"data-glisse-big" => "assets/014.jpg", :class => "t1"  %></li>
+					</ul>
+
+				</div>
+
+				<%= render "shared/side"%>
+
+				<div style="clear: both;"></div>
+			</div>
+		</article>
+	</div>
+
+	<%= render "shared/footer" %>
+</div>
+<%= stylesheet_link_tag    "glisse", media: "all" %>
+<%= javascript_include_tag "glisse.js" %>
+<script type="text/javascript">
+$(function() {
+	$(".t1").glisse({speed: 500, changeSpedd: 550, effect: "fade", fullscreen: false});
+});
+</script>
+<!-- container -->

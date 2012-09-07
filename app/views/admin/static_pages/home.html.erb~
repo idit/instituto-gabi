@@ -1,0 +1,9 @@
+<%= provide(:title, "Home") %>
+<%= render 'layouts/admin/menu' %>
+<div class="row">
+  <div class="span12" id="content">
+    <div class="page-header">
+      <h1 class="center">Olá, <%= current_user.name %></h1>
+    </div>
+  </div>
+</div>

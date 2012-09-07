@@ -1,0 +1,29 @@
+<!-- container -->
+<div class="container">
+	<%= render "shared/header" %>
+
+	<%= render "shared/nav" %>
+
+	<div class="row page-bg" style="min-height: 630px;">
+		<article>
+			<div class="page-bg">
+				<div class="content span7">
+					<h3><%= @noticia.title %></h3>
+					<div>
+						<%= @noticia.sumary.html_safe %>
+					</div>
+					<div>
+						<%= @noticia.post.html_safe %>
+					</div>
+			  </div>
+
+				<%= render "shared/side"%>
+
+				<div style="clear: both;"></div>
+			</div>
+		</article>
+	</div>
+
+	<%= render "shared/footer" %>
+</div>
+<!-- container -->

@@ -1,0 +1,17 @@
+defaults: &defaults
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  username: root
+  password: A123451
+  host: localhost
+
+development:
+  <<: *defaults
+  database: igabi_development
+
+test:
+  <<: *defaults
+  database: igabi_test
+
