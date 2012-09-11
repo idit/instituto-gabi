@@ -34,6 +34,10 @@ class DataFile < ActiveRecord::Base
   VIDEO_MIMETYPE       = ["video/mpeg", "video/jpeg", "video/mp4"]
   TEXT_MIMETYPE        = ["text/html"]
 
+  def self.paginate_all(page)
+    paginate :per_page => 6, :page => page, :order => "name"
+  end
+
   def file= (f)
     @file = f
   end
