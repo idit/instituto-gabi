@@ -12,7 +12,7 @@ class Admin::PostsController < Admin::AdminController
 
   def new
     @post = Post.new
-    @files = DataFile.paginate_all(params[:file_page])
+    @files = DataFile.paginate(:page => params[:file_page])
   end
 
   def edit

@@ -20,7 +20,7 @@
       <ul>
       </div>
       <div>
-        <%= will_paginate @files, param_name: 'file_page' %>
+        <%= paginate @files, :param_name => :file_page %>
       </div>
     </div>
   </div>
